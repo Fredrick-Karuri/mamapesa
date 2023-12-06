@@ -1,32 +1,34 @@
-import React from "react";
+import React from 'react'
 
-import { Button, Img, Text } from "components";
+import { Button, Img, Text } from 'components'
 
-import { handleSectionNavigation } from "utils";
+import { handleSectionNavigation } from 'utils'
 
-const Navbar = (props) => {
+const Navbar = props => {
   return (
     <>
       <header className={props.className}>
-        <div className="flex flex-row gap-8 items-center justify-center w-full">
-          <Img
-            className="flex-1 h-[55px] max-h-[55px] md:w-14"
-            src="images/img_column.svg"
-            alt="column"
-          />
-          <ul className="flex flex-row gap-8 sm:hidden items-start justify-start w-auto common-row-list">
+        <div className='flex flex-row  items-center justify-between w-full'>
+          <div className='p-2'>
+            <Img
+              className=' h-[48px] w-auto sm:h-[40px] '
+              src='public/images/mamapesa.png'
+              alt='column'
+            />
+          </div>
+          <ul className='flex flex-row gap-8 sm:hidden items-start justify-start w-auto common-row-list'>
             <li>
-              <a href="javascript:" className="text-base text-black-900">
-                <Text size="txtLatoRegular16">{props?.nav1}</Text>
+              <a href='javascript:' className='text-base text-black-900'>
+                <Text size='txtLatoRegular16'>{props?.nav1}</Text>
               </a>
             </li>
             <li>
-              <a className="text-base text-black-900">
+              <a className='text-base text-black-900'>
                 <Text
-                  className="common-pointer"
-                  size="txtLatoRegular16"
+                  className='common-pointer'
+                  size='txtLatoRegular16'
                   onClick={() => {
-                    handleSectionNavigation("block3");
+                    handleSectionNavigation('block3')
                   }}
                 >
                   {props?.nav2}
@@ -34,12 +36,12 @@ const Navbar = (props) => {
               </a>
             </li>
             <li>
-              <a className="text-base text-black-900">
+              <a className='text-base text-black-900'>
                 <Text
-                  className="common-pointer"
-                  size="txtLatoRegular16"
+                  className='common-pointer'
+                  size='txtLatoRegular16'
                   onClick={() => {
-                    handleSectionNavigation("block2");
+                    handleSectionNavigation('block2')
                   }}
                 >
                   {props?.nav3}
@@ -48,25 +50,25 @@ const Navbar = (props) => {
             </li>
           </ul>
           <Button
-            className="!rounded-[20px] cursor-pointer font-roboto min-w-[97px] md:rounded-[16px] text-base text-center"
-            shape="square"
-            color="purple_800"
-            size="xs"
-            variant="fill"
+            className='!rounded-[20px] cursor-pointer font-roboto min-w-[97px] md:rounded-[16px] text-base text-center'
+            shape='square'
+            color='purple_800'
+            size='xxs'
+            variant='fill'
           >
             {props?.btn}
           </Button>
         </div>
       </header>
     </>
-  );
-};
+  )
+}
 
 Navbar.defaultProps = {
-  nav1: "About Us",
-  nav2: "Services",
-  nav3: "Contact Us",
-  btn: "Get App",
-};
+  nav1: 'About Us',
+  nav2: 'Services',
+  nav3: 'Contact Us',
+  btn: 'Get App'
+}
 
-export default Navbar;
+export default Navbar
