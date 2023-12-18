@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Button, Img, Line, List, SelectBox, Text } from 'components'
 import BenefitsCard from 'components/BenefitsCard'
 import Features from 'components/Features'
@@ -8,6 +9,9 @@ import Navbar from 'components/Navbar'
 import Step from 'components/Step'
 import Testimonial from 'components/Testimonial'
 import FAQ from 'components/FaqAccordion'
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 
 import { handleSectionNavigation } from 'utils'
 
@@ -15,6 +19,7 @@ const LandingPage = () => {
   return (
     <>
       <div className='flex flex-col font-lato auto w-auto sm:w-full md:w-full'>
+      
         <Navbar className='bg-white-A700 flex sm:flex-row h-[72px] md:h-auto items-center justify-center px-16 md:px-5 sticky top-[0] w-full' />
         {heroSection()}
         <div
@@ -24,7 +29,9 @@ const LandingPage = () => {
             handleSectionNavigation('block1')
           }}
         >
-          <Features className='flex flex-1 flex-col gap-6 items-start justify-start w-full' />
+        
+          <Features className='flex flex-1 flex-col gap-6 items-start justify-start w-full'/>
+          
           <Features
             className='flex flex-1 flex-col gap-6 items-start justify-start w-full'
             icon='images/img_map.svg'
@@ -37,11 +44,10 @@ const LandingPage = () => {
             title='Break Financial Barriers'
             description='Join the MamaPesa community and break through financial barriers. Our app offers a dedicated platform for women to secure funding and pave their own path to success. Say goodbye to limitations and hello to a world of opportunities.'
           />
+          
         </div>
-        <div
-          className='bg-white-A700 flex flex-col md:flex-row font-roboto items-center justify-center sm:p-[] md:px-10 px-16 sm:px-5 sm:py-14 py-28 w-full'
-          id='block3'
-        >
+        <div className='bg-purple-300 flex flex-col md:flex-row font-roboto items-center justify-center sm:p-[] md:px-10 px-16 sm:px-5 sm:py-14 py-28 w-full' id='block3'
+>
           <div className='flex sm:flex-col flex-row md:gap-10 items-center justify-between max-w-[1312px] mx-auto md:pr-10 sm:pr-5 w-full'>
             <div className='flex flex-1 flex-col gap-6 sm:items-center items-start justify-start max-w-[644px] w-full'>
               <div className='flex flex-col gap-6 items-start justify-start w-full'>
@@ -208,9 +214,10 @@ const LandingPage = () => {
               </Button>
             </div>
           </div>
+          
         </div>
-        <Testimonial className='bg-white-A700 flex flex-col font-manrope gap-20 items-center justify-start md:px-10 px-16 sm:px-5 py-28 w-full' />
-        <div className='bg-white-A700 flex sm:flex-col flex-row font-lato md:gap-10 gap-20 items-center justify-start md:px-10 px-16 sm:px-4 py-28 w-full'>
+        <Testimonial className='flex flex-col font-manrope gap-20 items-center justify-start md:px-10 px-16 sm:px-5 py-28 w-full' />
+        <div className='flex sm:flex-col flex-row font-lato md:gap-10 gap-20 items-center justify-start md:px-10 px-16 sm:px-4 py-28 w-full'>
           <div className='flex flex-1 flex-col gap-6 items-start justify-start w-full'>
             <div className='flex flex-col items-start justify-start w-full'>
               <div className='flex flex-col gap-6 items-start justify-start w-full'>
@@ -249,6 +256,7 @@ const LandingPage = () => {
         </div>
         <Testimonial
           className='bg-white-A700 flex flex-col font-manrope gap-20 items-center justify-start md:px-10 px-16 sm:px-5 py-28 w-full'
+          
           txt={
             <>
               As a student navigating the world of finance, EmpowerHer Finance
@@ -299,7 +307,7 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <div className='bg-white-A700 flex flex-col font-roboto items-center justify-start md:px-10 px-16 sm:px-5 py-28 w-full'>
+        <div className='bg-colors bg-white-A700 flex flex-col font-roboto items-center justify-start md:px-10 px-16 sm:px-5 py-28 w-full'>
           <div className='flex flex-col gap-6 items-center justify-start max-w-3xl w-full'>
             <div className='flex flex-col gap-6 items-center justify-start w-full'>
               <Text
@@ -492,64 +500,112 @@ function howItWorks () {
 }
 
 function heroSection () {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+    
   return (
-    <div className='sm:bg-colors bg-white-A700 flex sm:flex-col flex-row md:gap-10  sm:h-[90vh] items-center justify-between px-40 md:pl-10  md:px-10 px- sm:px-0 sm:py-4 py-24 w-full'>
-      <div className='flex flex-1 flex-col gap-6  items-start justify-start md:w-1/2 w-full sm:w-[90%] '>
-        <div className='flex flex-col gap-6 items-start justify-start w-[56%] md:w-full'>
-          <Text
-            className='max-w-[616px] md:max-w-full sm:text-[32px] md:text-[40px] text-[56px] text-black-900 tracking-[-1.12px] sm:tracking-[1px]'
+    <div className='flex flex-col md:flex-row md:gap-10 sm:h-[45vh] items-center justify-between px-1 md:pl-10 md:px-10 px- sm:px-0 sm:py-0 py-2 sm:py-0 w-full relative'>
+      <div className="w-full sm:w-full md:w-full lg:w-3/4 xl:w-3/4">
+        <Carousel
+          showThumbs={false}
+          showStatus={false}
+          infiniteLoop={true}
+          autoPlay={true}
+          interval={3000}
+          stopOnHover={false}
+          className="w-full h-full"
+        >
+          <div>
+            <img src='images/img001.png' alt='Image 1' className="w-full  object-cover" />
+          </div>
+          <div>
+            <img src='images/img002.png' alt='Image 2' className="w-full  object-cover"/>
+          </div>
+          <div>
+            <img src='images/img003.png' alt='Image 3' className="w-full  object-cover"/>
+          </div>
+        </Carousel>
+      </div>
+  
+      <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center w-full sm:max-w-[380px]  md:w-[513px] px-4 sm:px-1 sm:max-h-[230px] pl-20 pt-0 '>
+  
+        <Text
+            className='max-w-[616px] md:max-w-full sm:text-[32px] md:text-[40px] text-[56px] text-white-A700 tracking-[-1.12px] sm:tracking-[1px] py-50 sm:py-0'
             size='txtManropeExtraBold56'
           >
             Empower Your Financial Independence
           </Text>
           <Text
-            className=' md:max-w-full md:text-base text-black-900 text-lg '
-            size='txtLatoRegular18'
+            className='max-w-[750px] md:max-w-[full] md:text-base text-white-A700 text-lg py-5 sm:py-0'
+            size='txtLatoRegular18' 
           >
-            <>
-              Secure funding for your income-generating ventures and achieve
-              economic resilience and independence with MamaPesa&#39;s dedicated
-              platform. Say goodbye to financial barriers and hello to
-              empowerment.
-            </>
+            Secure funding for your income-generating ventures and achieve
+            economic resilience and independence with MamaPesa&#39;s dedicated
+            platform. Say goodbye to financial barriers and hello to
+            empowerment.
           </Text>
-        </div>
-        <div className='flex flex-col sm:items-center items-start justify-start sm:p-[] pt-4 sm:pt-[] w-[513px] md:w-full'>
-          <div className='sm:absolute sm:bottom-[-24px] flex flex-row gap-4 sm:items-center items-start sm:justify-center justify-start  sm:w-4/5 w-full'>
-            <Button
-              className='!rounded-[20px] cursor-pointer sm:flex-1 font-lato leading-[normal] text-base text-center sm:w-full outline-purple-800 px-8 sm:px-0 '
-              shape='round'
-              color='purple_800'
-              size='xs'
-              variant='outline'
-            >
-              Download App
-            </Button>
-            <Button
-              className='common-pointer cursor-pointer sm:flex-1 font-lato  leading-[normal] outline-purple-800 rounded-[20px] text-base text-center sm:w-full px-8 sm:px-0 '
-              onClick={() => {
-                handleSectionNavigation('block1')
-              }}
-              color='purple_800'
-              shape='round'
-              size='xs'
-              variant='fill'
-            >
-              Learn More
-            </Button>
-          </div>
+  
+        <div className='flex flex-row sm:flex-row gap-10 sm:items-center items-start sm:justify-center justify-start py-5'>
+          <Button
+            className='bg-purple-100 !rounded-[20px] cursor-pointer sm:w-full md:flex-1 font-lato leading-[normal] text-base text-center outline-purple_900 px-8 sm:px-0'
+            shape='round'
+            color='purple_800'
+            size='xs'
+            variant='outline'
+          >
+            Join Now
+          </Button>
+          <Button
+            className='common-pointer cursor-pointer sm:w-full md:flex-1 font-lato leading-[normal] outline-purple-800 rounded-[20px] text-base text-center px-8 sm:px-0 '
+            onClick={() => {
+              handleSectionNavigation('block1');
+            }}
+            color='purple_800'
+            shape='round'
+            size='xs'
+            variant='fill'
+          >
+            Learn More
+          </Button>
         </div>
       </div>
-      {/* <div>
-        </div> */}
-      <Img
-        className='flex-1 md:h-[400px] h-[640px] sm:h-[40%] max-h-[640px] object-cover rounded-lg md:w-2/5 sm:w-[90%] sm:absolute sm:bottom-[56px]'
-        src='images/img_placeholderimage.png'
-        alt='placeholderimag'
-      />
     </div>
-  )
-}
+  );
+  
+};
+      {/* <div>
+        </div>
+
+
+      
+      {/* <div className='w-full sm:w-[90%] md:w-1/2'>
+        <Slider {...settings}>
+          <Img
+            className='flex-1 md:h-[400px] h-[640px] sm:h-[40%] max-h-[640px] object-cover rounded-lg md:w-2/5 sm:w-[90%] sm:absolute sm:bottom-[56px]'
+            src='images/img_placeholderimage.png'
+            alt='placeholderimag_1'
+          />
+          <Img
+            className='flex-1 md:h-[400px] h-[640px] sm:h-[40%] max-h-[640px] object-cover rounded-lg md:w-2/5 sm:w-[90%] sm:absolute sm:bottom-[56px]'
+            src='images/img001.png'
+            alt='placeholderimag_2'
+          />
+          <Img
+            className='flex-1 md:h-[400px] h-[640px] sm:h-[40%] max-h-[640px] object-cover rounded-lg md:w-2/5 sm:w-[90%] sm:absolute sm:bottom-[56px]'
+            src='images/img002.png'
+            alt='placeholderimag_3'
+          />
+        </Slider>
+      </div> */}
+
+//     </div>
+//   )
+// }
 
 {
   /* <div className='flex flex-1 flex-col items-start justify-start w-full'> */
@@ -579,3 +635,5 @@ function heroSection () {
 {
   /* </div> */
 }
+
+

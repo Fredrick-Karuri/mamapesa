@@ -6,7 +6,7 @@ const Testimonial = (props) => {
   return (
     <>
       <div className={props.className}>
-        <div className="flex flex-col gap-8 items-center justify-start max-w-3xl w-full">
+        <div className="bg-colors !rounded-[20px] flex flex-col p-10 sm:p-5 gap-8 items-center justify-start">
           <Text
             className="max-w-3xl md:max-w-full text-2xl md:text-[22px] text-black-900 text-center sm:text-xl tracking-[-0.48px]"
             size="txtManropeSemiBold24"
