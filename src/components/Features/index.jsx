@@ -5,6 +5,7 @@ import { Img, Text } from "components";
 const Features = (props) => {
   return (
     <>
+    
       <div className={props.className}>
         <Img className="h-12 w-12" alt="logos" src={props?.icon} />
         <div className="flex flex-col gap-6 items-start justify-start w-full">
