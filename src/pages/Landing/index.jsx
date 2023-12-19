@@ -50,7 +50,7 @@ const LandingPage = () => {
 >
           <div className='flex sm:flex-col flex-row md:gap-10 items-center justify-between max-w-[1312px] mx-auto md:pr-10 sm:pr-5 w-full'>
             <div className='flex flex-1 flex-col gap-6 sm:items-center items-start justify-start max-w-[644px] w-full'>
-              <div className='flex flex-col gap-6 items-start justify-start w-full'>
+              <div className='flex flex-col gap-6 items-start justify-start w-full '>
                 <Text
                   className='md:leading-[] max-w-[644px] md:max-w-full sm:text-2xl text-5xl md:text-[32px] text-black-900 tracking-[-0.96px] md:tracking-[1.5px]'
                   size='txtManropeExtraBold48'
@@ -84,7 +84,7 @@ const LandingPage = () => {
               </div>
             </div>
             <Img
-              className='md:flex-1 h-[594px] sm:h-auto object-cover sm:w-3/5 w-[354px] md:w-full'
+              className='md:flex-1 h-[594px] sm:h-auto object-cover sm:w-3/5 w-[354px] md:w-full '
               src='images/img_mockrocketcapture.png'
               alt='mockrocketcaptu'
             />
@@ -441,17 +441,7 @@ function howItWorks () {
             Unlock Your Financial Independence
           </Text>
         </div>
-        <div className='flex flex-col font-lato items-center justify-start pt-4 w-auto'>
-          <Button
-            className='cursor-pointer leading-[normal] min-w-[128px] text-base text-center'
-            shape='round'
-            color='black_900'
-            size='xs'
-            variant='outline'
-          >
-            Learn more
-          </Button>
-        </div>
+        
       </div>
       <div className='flex flex-1 flex-col items-start justify-start w-full'>
         <List

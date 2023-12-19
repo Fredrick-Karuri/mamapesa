@@ -7,6 +7,7 @@ const Features = (props) => {
     <>
     
       <div className={props.className}>
+      <div className= 'outline outline-[1px] outline-black-900 w-full p-10 sm:p-5'>
         <Img className="h-12 w-12" alt="logos" src={props?.icon} />
         <div className="flex flex-col gap-6 items-start justify-start w-full">
           <Text
@@ -21,6 +22,7 @@ const Features = (props) => {
           >
             {props?.description}
           </Text>
+          </div>
         </div>
       </div>
     </>
