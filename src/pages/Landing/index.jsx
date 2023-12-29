@@ -29,8 +29,9 @@ const LandingPage = () => {
             handleSectionNavigation('block1')
           }}
         >
+
         
-          <Features className='flex flex-1 flex-col gap-6 items-start justify-start w-full'/>
+          <Features className='flex flex-1 flex-col gap-6 items-start justify-start w-full '/>
           
           <Features
             className='flex flex-1 flex-col gap-6 items-start justify-start w-full'
@@ -50,7 +51,7 @@ const LandingPage = () => {
 >
           <div className='flex sm:flex-col flex-row md:gap-10 items-center justify-between max-w-[1312px] mx-auto md:pr-10 sm:pr-5 w-full'>
             <div className='flex flex-1 flex-col gap-6 sm:items-center items-start justify-start max-w-[644px] w-full'>
-              <div className='flex flex-col gap-6 items-start justify-start w-full'>
+              <div className='flex flex-col gap-6 items-start justify-start w-full '>
                 <Text
                   className='md:leading-[] max-w-[644px] md:max-w-full sm:text-2xl text-5xl md:text-[32px] text-black-900 tracking-[-0.96px] md:tracking-[1.5px]'
                   size='txtManropeExtraBold48'
@@ -84,7 +85,7 @@ const LandingPage = () => {
               </div>
             </div>
             <Img
-              className='md:flex-1 h-[594px] sm:h-auto object-cover sm:w-3/5 w-[354px] md:w-full'
+              className='md:flex-1 h-[594px] sm:h-auto object-cover sm:w-3/5 w-[354px] md:w-full '
               src='images/img_mockrocketcapture.png'
               alt='mockrocketcaptu'
             />
@@ -441,17 +442,7 @@ function howItWorks () {
             Unlock Your Financial Independence
           </Text>
         </div>
-        <div className='flex flex-col font-lato items-center justify-start pt-4 w-auto'>
-          <Button
-            className='cursor-pointer leading-[normal] min-w-[128px] text-base text-center'
-            shape='round'
-            color='black_900'
-            size='xs'
-            variant='outline'
-          >
-            Learn more
-          </Button>
-        </div>
+        
       </div>
       <div className='flex flex-1 flex-col items-start justify-start w-full'>
         <List
@@ -510,7 +501,7 @@ function heroSection () {
     
   return (
     <div className='flex flex-col md:flex-row md:gap-10 sm:h-[45vh] items-center justify-between px-1 md:pl-10 md:px-10 px- sm:px-0 sm:py-0 py-2 sm:py-0 w-full relative'>
-      <div className="w-full sm:w-full md:w-full lg:w-3/4 xl:w-3/4">
+      <div className="w-full sm:w-full h-full md:w-full lg:w-3/4 xl:w-3/4">
         <Carousel
           showThumbs={false}
           showStatus={false}
@@ -532,16 +523,16 @@ function heroSection () {
         </Carousel>
       </div>
   
-      <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center w-full sm:max-w-[380px]  md:w-[513px] px-4 sm:px-1 sm:max-h-[230px] pl-20 pt-0 '>
+      <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center w-full sm:max-w-[380px]  md:w-[513px] px-4 sm:px-1 sm:max-h-[230px] pl-20 pt-0 py-24 '>
   
         <Text
-            className='max-w-[616px] md:max-w-full sm:text-[32px] md:text-[40px] text-[56px] text-white-A700 tracking-[-1.12px] sm:tracking-[1px] py-50 sm:py-0'
+            className='max-w-[616px] sm:max-w-[100px] md:max-w-full sm:text-[28px] md:text-[40px] text-[56px] text-white-A700 tracking-[-1.12px] sm:tracking-[1px] py-50 sm:py-1'
             size='txtManropeExtraBold56'
           >
             Empower Your Financial Independence
           </Text>
           <Text
-            className='max-w-[750px] md:max-w-[full] md:text-base text-white-A700 text-lg py-5 sm:py-0'
+            className='max-w-[750px] md:max-w-[full] md:text-base text-white-A700 text-lg py-5 sm:hidden'
             size='txtLatoRegular18' 
           >
             Secure funding for your income-generating ventures and achieve
@@ -550,7 +541,7 @@ function heroSection () {
             empowerment.
           </Text>
   
-        <div className='flex flex-row sm:flex-row gap-10 sm:items-center items-start sm:justify-center justify-start py-5'>
+        <div className='flex flex-row sm:flex-row gap-20 sm:items-center items-start sm:justify-center justify-start py-14'>
           <Button
             className='bg-purple-100 !rounded-[20px] cursor-pointer sm:w-full md:flex-1 font-lato leading-[normal] text-base text-center outline-purple_900 px-8 sm:px-0'
             shape='round'
@@ -578,6 +569,7 @@ function heroSection () {
   );
   
 };
+
       {/* <div>
         </div>
 
