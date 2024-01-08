@@ -346,23 +346,13 @@ const LandingPage = () => {
 
   function faqs () {
     const faqs = [
-      // {
-      //   question: 'What is MamaPesa?',
-      //   answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-      // },
+      
       {
         question: 'How does MamaPesa empower women financially?',
         answer:
           'MamaPesa facilitates financial empowerment for women by providing access to tailored financial services, including financing options for income-generating assets, utility management, and a wealth of educational content aimed at fostering financial literacy and independence.'
       },
-      // {
-      //   question: 'What are the benefits of MamaPesa?',
-      //   answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-      // },
-      // {
-      //   question: 'How can I use MamaPesa?',
-      //   answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-      // },
+      
       {
         question: 'Is my financial information secure with MamaPesa?',
         answer:
@@ -376,10 +366,7 @@ const LandingPage = () => {
         question: 'What types of income-generating assets can be financed through the app?',
         answer: 'MamaPesa supports the financing of a diverse range of income-generating assets, such as small business ventures, education-related expenses, and career development initiatives.'
       },
-      // {
-      //   question: 'How can I use MamaPesa?',
-      //   answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-      // },
+    
 
     ]
     return (
@@ -501,7 +488,8 @@ function heroSection () {
     
   return (
     <div className='flex flex-col md:flex-row md:gap-10 sm:h-[45vh] items-center justify-between px-1 md:pl-10 md:px-10 px- sm:px-0 sm:py-0 py-2 sm:py-0 w-full relative'>
-      <div className="w-full sm:w-full h-full md:w-full lg:w-3/4 xl:w-3/4">
+      
+        <div className="w-full sm:w-full h-full md:w-full lg:w-3/4 xl:w-3/4">
         <Carousel
           showThumbs={false}
           showStatus={false}
@@ -512,13 +500,13 @@ function heroSection () {
           className="w-full h-full"
         >
           <div>
-            <img src='images/img001.png' alt='Image 1' className="w-full  object-cover" />
+            <img src='images/img001.webp' alt='Image 1' className="w-full object-cover" loading="lazy" />
           </div>
           <div>
-            <img src='images/img002.png' alt='Image 2' className="w-full  object-cover"/>
+            <img src='images/img002.webp' alt='Image 2' className="w-full object-cover" loading="lazy" />
           </div>
           <div>
-            <img src='images/img003.png' alt='Image 3' className="w-full  object-cover"/>
+            <img src='images/img003.webp' alt='Image 3' className="w-full object-cover" loading="lazy" />
           </div>
         </Carousel>
       </div>
@@ -569,63 +557,5 @@ function heroSection () {
   );
   
 };
-
-      {/* <div>
-        </div>
-
-
-      
-      {/* <div className='w-full sm:w-[90%] md:w-1/2'>
-        <Slider {...settings}>
-          <Img
-            className='flex-1 md:h-[400px] h-[640px] sm:h-[40%] max-h-[640px] object-cover rounded-lg md:w-2/5 sm:w-[90%] sm:absolute sm:bottom-[56px]'
-            src='images/img_placeholderimage.png'
-            alt='placeholderimag_1'
-          />
-          <Img
-            className='flex-1 md:h-[400px] h-[640px] sm:h-[40%] max-h-[640px] object-cover rounded-lg md:w-2/5 sm:w-[90%] sm:absolute sm:bottom-[56px]'
-            src='images/img001.png'
-            alt='placeholderimag_2'
-          />
-          <Img
-            className='flex-1 md:h-[400px] h-[640px] sm:h-[40%] max-h-[640px] object-cover rounded-lg md:w-2/5 sm:w-[90%] sm:absolute sm:bottom-[56px]'
-            src='images/img002.png'
-            alt='placeholderimag_3'
-          />
-        </Slider>
-      </div> */}
-
-//     </div>
-//   )
-// }
-
-{
-  /* <div className='flex flex-1 flex-col items-start justify-start w-full'> */
-}
-{
-  /* <div className='flex flex-col items-start justify-start  w-full'>
-    <Line className='bg-black-900 h-px w-full' />
-    <SelectBox
-      
-      placeholderClassName='text-black-900'
-      indicator={
-        <Img
-        className='h-8 w-8'
-        src='images/img_arrowdown.svg'
-        alt='arrow_down'
-        />
-      }
-      isMulti={false}
-      name='title'
-      options={titleOptionsList}
-      isSearchable={false}
-      placeholder='How does MamaPesa empower women financially?'
-      size='xs'
-      />
-    </div> */
-}
-{
-  /* </div> */
-}
 
 
